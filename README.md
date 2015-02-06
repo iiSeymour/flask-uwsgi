@@ -69,7 +69,15 @@ Next, create the config file.
 
 Next, start uWSGI.
 
-    sudo service flask-uwsgi start
+```bash
+sudo service flask-uwsgi start
+```
+
+If this fails with `flask-uwsgi: unrecognized service` then you will need to reload the init daemon configuartion.
+
+```bash
+initctl reload-configuration
+```
 
 Next, check that uWSGI is running.
 
